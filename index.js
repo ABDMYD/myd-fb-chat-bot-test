@@ -7,7 +7,7 @@ const cmds = require("commands.js");
 const app = express()
  
 app.get('/', function (req, res) {
-    res.sendFile(path.resolve(__dirname + '/main.html'))
+    res.sendFile('./main.html', { root : __dirname})
 })
  
 app.listen(80)
