@@ -1,18 +1,17 @@
 const login = require("facebook-chat-api");
 const cmds = require("commands.js");
-const express = require("express");
 const fs = require("file-system");
+const express = require("express");
 
-
-const app = express()
+const app = express();
  
 app.get('/', function (req, res) {
     fs.readFile('main.html', 'utf8', function(err, contents) {
        res.send(contents);
     });
-})
+});
  
-app.listen(80)
+app.listen(80);
 
 
 
